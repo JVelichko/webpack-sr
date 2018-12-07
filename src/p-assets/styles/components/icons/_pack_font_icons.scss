@@ -1,0 +1,882 @@
+@font-face {
+    font-family: "icons";
+    src: url('~fonts/promo/icons/icons.eot');
+    src: url('~fonts/promo/icons/icons.eot?#iefix') format('eot'),
+         url('~fonts/promo/icons/icons.woff') format('woff'),
+         url('~fonts/promo/icons/icons.woff2') format('woff2'),
+         url('~fonts/promo/icons/icons.ttf') format('truetype'),
+         url('~fonts/promo/icons/icons.svg#icons') format('svg');
+  }
+
+  @mixin n-icon-styles {
+    display: inline-block;
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  }
+
+  %n-icon-before {
+    @include n-icon-styles;
+  }
+
+  @function n-icon-char($filename) {
+    $char: "";
+
+    @if $filename == address {
+      $char: "\E001";
+    }
+    @if $filename == analytics {
+      $char: "\E002";
+    }
+    @if $filename == ang-down {
+      $char: "\E003";
+    }
+    @if $filename == ang-left {
+      $char: "\E004";
+    }
+    @if $filename == ang-right {
+      $char: "\E005";
+    }
+    @if $filename == ang-up {
+      $char: "\E006";
+    }
+    @if $filename == api-fast {
+      $char: "\E007";
+    }
+    @if $filename == api-free {
+      $char: "\E008";
+    }
+    @if $filename == api-unlim {
+      $char: "\E009";
+    }
+    @if $filename == arrow-circle-left {
+      $char: "\E00A";
+    }
+    @if $filename == arrow-circle-right {
+      $char: "\E00B";
+    }
+    @if $filename == arrow-down {
+      $char: "\E00C";
+    }
+    @if $filename == arrow-left {
+      $char: "\E00D";
+    }
+    @if $filename == arrow-repeat {
+      $char: "\E00E";
+    }
+    @if $filename == arrow-up {
+      $char: "\E00F";
+    }
+    @if $filename == awards-forex {
+      $char: "\E010";
+    }
+    @if $filename == awards-iair {
+      $char: "\E011";
+    }
+    @if $filename == baidu {
+      $char: "\E012";
+    }
+    @if $filename == ballpen {
+      $char: "\E013";
+    }
+    @if $filename == ban {
+      $char: "\E014";
+    }
+    @if $filename == banknotes {
+      $char: "\E015";
+    }
+    @if $filename == blank-flag {
+      $char: "\E016";
+    }
+    @if $filename == border-check {
+      $char: "\E017";
+    }
+    @if $filename == burger-menu {
+      $char: "\E018";
+    }
+    @if $filename == burger {
+      $char: "\E019";
+    }
+    @if $filename == calc {
+      $char: "\E01A";
+    }
+    @if $filename == cart-payment {
+      $char: "\E01B";
+    }
+    @if $filename == check-bold-fill {
+      $char: "\E01C";
+    }
+    @if $filename == check-bold-stroke {
+      $char: "\E01D";
+    }
+    @if $filename == check-bold {
+      $char: "\E01E";
+    }
+    @if $filename == check-circle-o {
+      $char: "\E01F";
+    }
+    @if $filename == check-open-circle {
+      $char: "\E020";
+    }
+    @if $filename == check {
+      $char: "\E021";
+    }
+    @if $filename == chevron-down {
+      $char: "\E022";
+    }
+    @if $filename == chevron-right {
+      $char: "\E023";
+    }
+    @if $filename == cldr {
+      $char: "\E024";
+    }
+    @if $filename == clip {
+      $char: "\E025";
+    }
+    @if $filename == close-bold {
+      $char: "\E026";
+    }
+    @if $filename == close {
+      $char: "\E027";
+    }
+    @if $filename == coin-down {
+      $char: "\E028";
+    }
+    @if $filename == continuance {
+      $char: "\E029";
+    }
+    @if $filename == data-provider {
+      $char: "\E02A";
+    }
+    @if $filename == deposit-now {
+      $char: "\E02B";
+    }
+    @if $filename == dialog {
+      $char: "\E02C";
+    }
+    @if $filename == dollar {
+      $char: "\E02D";
+    }
+    @if $filename == double-chevron-right {
+      $char: "\E02E";
+    }
+    @if $filename == double-eagle {
+      $char: "\E02F";
+    }
+    @if $filename == easy {
+      $char: "\E030";
+    }
+    @if $filename == email {
+      $char: "\E031";
+    }
+    @if $filename == energy {
+      $char: "\E032";
+    }
+    @if $filename == envelope-o {
+      $char: "\E033";
+    }
+    @if $filename == equalizer {
+      $char: "\E034";
+    }
+    @if $filename == error-circle {
+      $char: "\E035";
+    }
+    @if $filename == error-o {
+      $char: "\E036";
+    }
+    @if $filename == error-t {
+      $char: "\E037";
+    }
+    @if $filename == eur {
+      $char: "\E038";
+    }
+    @if $filename == exclamation-triangle {
+      $char: "\E039";
+    }
+    @if $filename == exit {
+      $char: "\E03A";
+    }
+    @if $filename == eye {
+      $char: "\E03B";
+    }
+    @if $filename == facebook {
+      $char: "\E03C";
+    }
+    @if $filename == female {
+      $char: "\E03D";
+    }
+    @if $filename == flag {
+      $char: "\E03E";
+    }
+    @if $filename == gift {
+      $char: "\E03F";
+    }
+    @if $filename == go-down {
+      $char: "\E040";
+    }
+    @if $filename == go-up {
+      $char: "\E041";
+    }
+    @if $filename == gp {
+      $char: "\E042";
+    }
+    @if $filename == hit-the-target {
+      $char: "\E043";
+    }
+    @if $filename == ig {
+      $char: "\E044";
+    }
+    @if $filename == info-circle {
+      $char: "\E045";
+    }
+    @if $filename == instagram {
+      $char: "\E046";
+    }
+    @if $filename == kzt {
+      $char: "\E047";
+    }
+    @if $filename == last-step {
+      $char: "\E048";
+    }
+    @if $filename == learn {
+      $char: "\E049";
+    }
+    @if $filename == lock {
+      $char: "\E04A";
+    }
+    @if $filename == long-arrow-right {
+      $char: "\E04B";
+    }
+    @if $filename == mail {
+      $char: "\E04C";
+    }
+    @if $filename == male {
+      $char: "\E04D";
+    }
+    @if $filename == medal {
+      $char: "\E04E";
+    }
+    @if $filename == minus {
+      $char: "\E04F";
+    }
+    @if $filename == more {
+      $char: "\E050";
+    }
+    @if $filename == mouse {
+      $char: "\E051";
+    }
+    @if $filename == offer20000 {
+      $char: "\E052";
+    }
+    @if $filename == offer500 {
+      $char: "\E053";
+    }
+    @if $filename == offer5000 {
+      $char: "\E054";
+    }
+    @if $filename == offer70000 {
+      $char: "\E055";
+    }
+    @if $filename == ok {
+      $char: "\E056";
+    }
+    @if $filename == paperplan {
+      $char: "\E057";
+    }
+    @if $filename == payment {
+      $char: "\E058";
+    }
+    @if $filename == payout {
+      $char: "\E059";
+    }
+    @if $filename == phone {
+      $char: "\E05A";
+    }
+    @if $filename == plus {
+      $char: "\E05B";
+    }
+    @if $filename == post {
+      $char: "\E05C";
+    }
+    @if $filename == profile {
+      $char: "\E05D";
+    }
+    @if $filename == question-circle {
+      $char: "\E05E";
+    }
+    @if $filename == question {
+      $char: "\E05F";
+    }
+    @if $filename == refresh {
+      $char: "\E060";
+    }
+    @if $filename == round-arrow {
+      $char: "\E061";
+    }
+    @if $filename == round-full {
+      $char: "\E062";
+    }
+    @if $filename == round-o {
+      $char: "\E063";
+    }
+    @if $filename == rounded-rect-hollow {
+      $char: "\E064";
+    }
+    @if $filename == rounded-rect {
+      $char: "\E065";
+    }
+    @if $filename == ru-for-ua {
+      $char: "\E066";
+    }
+    @if $filename == rub {
+      $char: "\E067";
+    }
+    @if $filename == search {
+      $char: "\E068";
+    }
+    @if $filename == settings {
+      $char: "\E069";
+    }
+    @if $filename == shield {
+      $char: "\E06A";
+    }
+    @if $filename == simple-check {
+      $char: "\E06B";
+    }
+    @if $filename == skype {
+      $char: "\E06C";
+    }
+    @if $filename == star {
+      $char: "\E06D";
+    }
+    @if $filename == support {
+      $char: "\E06E";
+    }
+    @if $filename == tg {
+      $char: "\E06F";
+    }
+    @if $filename == timeframes {
+      $char: "\E070";
+    }
+    @if $filename == times-circle-o {
+      $char: "\E071";
+    }
+    @if $filename == times {
+      $char: "\E072";
+    }
+    @if $filename == tool-bold {
+      $char: "\E073";
+    }
+    @if $filename == tool-candlestick {
+      $char: "\E074";
+    }
+    @if $filename == tool-delete {
+      $char: "\E075";
+    }
+    @if $filename == tool-drawing {
+      $char: "\E076";
+    }
+    @if $filename == tool-indicator {
+      $char: "\E077";
+    }
+    @if $filename == tool-italics {
+      $char: "\E078";
+    }
+    @if $filename == tool-mountain {
+      $char: "\E079";
+    }
+    @if $filename == tool-setting {
+      $char: "\E07A";
+    }
+    @if $filename == tool-size {
+      $char: "\E07B";
+    }
+    @if $filename == tool-theme {
+      $char: "\E07C";
+    }
+    @if $filename == tool-thickness {
+      $char: "\E07D";
+    }
+    @if $filename == training {
+      $char: "\E07E";
+    }
+    @if $filename == tw {
+      $char: "\E07F";
+    }
+    @if $filename == usd {
+      $char: "\E080";
+    }
+    @if $filename == vk {
+      $char: "\E081";
+    }
+    @if $filename == wallet-in {
+      $char: "\E082";
+    }
+    @if $filename == wallet-o {
+      $char: "\E083";
+    }
+    @if $filename == wallet-out {
+      $char: "\E084";
+    }
+    @if $filename == wallet {
+      $char: "\E085";
+    }
+    @if $filename == weibo {
+      $char: "\E086";
+    }
+    @if $filename == winner {
+      $char: "\E087";
+    }
+    @if $filename == x {
+      $char: "\E088";
+    }
+    @if $filename == youtube {
+      $char: "\E089";
+    }
+    @if $filename == zalo {
+      $char: "\E08A";
+    }
+    @if $filename == zechat {
+      $char: "\E08B";
+    }
+
+    @return $char;
+  }
+
+  @mixin n-icon($filename, $insert: before, $extend: true) {
+    &:#{$insert} {
+      @if $extend {
+        @extend %n-icon-before;
+      } @else {
+        @include n-icon-styles;
+      }
+      content: n-icon-char($filename);
+    }
+  }
+
+  .n-icon-address {
+    @include n-icon(address);
+  }
+  .n-icon-analytics {
+    @include n-icon(analytics);
+  }
+  .n-icon-ang-down {
+    @include n-icon(ang-down);
+  }
+  .n-icon-ang-left {
+    @include n-icon(ang-left);
+  }
+  .n-icon-ang-right {
+    @include n-icon(ang-right);
+  }
+  .n-icon-ang-up {
+    @include n-icon(ang-up);
+  }
+  .n-icon-api-fast {
+    @include n-icon(api-fast);
+  }
+  .n-icon-api-free {
+    @include n-icon(api-free);
+  }
+  .n-icon-api-unlim {
+    @include n-icon(api-unlim);
+  }
+  .n-icon-arrow-circle-left {
+    @include n-icon(arrow-circle-left);
+  }
+  .n-icon-arrow-circle-right {
+    @include n-icon(arrow-circle-right);
+  }
+  .n-icon-arrow-down {
+    @include n-icon(arrow-down);
+  }
+  .n-icon-arrow-left {
+    @include n-icon(arrow-left);
+  }
+  .n-icon-arrow-repeat {
+    @include n-icon(arrow-repeat);
+  }
+  .n-icon-arrow-up {
+    @include n-icon(arrow-up);
+  }
+  .n-icon-awards-forex {
+    @include n-icon(awards-forex);
+  }
+  .n-icon-awards-iair {
+    @include n-icon(awards-iair);
+  }
+  .n-icon-baidu {
+    @include n-icon(baidu);
+  }
+  .n-icon-ballpen {
+    @include n-icon(ballpen);
+  }
+  .n-icon-ban {
+    @include n-icon(ban);
+  }
+  .n-icon-banknotes {
+    @include n-icon(banknotes);
+  }
+  .n-icon-blank-flag {
+    @include n-icon(blank-flag);
+  }
+  .n-icon-border-check {
+    @include n-icon(border-check);
+  }
+  .n-icon-burger-menu {
+    @include n-icon(burger-menu);
+  }
+  .n-icon-burger {
+    @include n-icon(burger);
+  }
+  .n-icon-calc {
+    @include n-icon(calc);
+  }
+  .n-icon-cart-payment {
+    @include n-icon(cart-payment);
+  }
+  .n-icon-check-bold-fill {
+    @include n-icon(check-bold-fill);
+  }
+  .n-icon-check-bold-stroke {
+    @include n-icon(check-bold-stroke);
+  }
+  .n-icon-check-bold {
+    @include n-icon(check-bold);
+  }
+  .n-icon-check-circle-o {
+    @include n-icon(check-circle-o);
+  }
+  .n-icon-check-open-circle {
+    @include n-icon(check-open-circle);
+  }
+  .n-icon-check {
+    @include n-icon(check);
+  }
+  .n-icon-chevron-down {
+    @include n-icon(chevron-down);
+  }
+  .n-icon-chevron-right {
+    @include n-icon(chevron-right);
+  }
+  .n-icon-cldr {
+    @include n-icon(cldr);
+  }
+  .n-icon-clip {
+    @include n-icon(clip);
+  }
+  .n-icon-close-bold {
+    @include n-icon(close-bold);
+  }
+  .n-icon-close {
+    @include n-icon(close);
+  }
+  .n-icon-coin-down {
+    @include n-icon(coin-down);
+  }
+  .n-icon-continuance {
+    @include n-icon(continuance);
+  }
+  .n-icon-data-provider {
+    @include n-icon(data-provider);
+  }
+  .n-icon-deposit-now {
+    @include n-icon(deposit-now);
+  }
+  .n-icon-dialog {
+    @include n-icon(dialog);
+  }
+  .n-icon-dollar {
+    @include n-icon(dollar);
+  }
+  .n-icon-double-chevron-right {
+    @include n-icon(double-chevron-right);
+  }
+  .n-icon-double-eagle {
+    @include n-icon(double-eagle);
+  }
+  .n-icon-easy {
+    @include n-icon(easy);
+  }
+  .n-icon-email {
+    @include n-icon(email);
+  }
+  .n-icon-energy {
+    @include n-icon(energy);
+  }
+  .n-icon-envelope-o {
+    @include n-icon(envelope-o);
+  }
+  .n-icon-equalizer {
+    @include n-icon(equalizer);
+  }
+  .n-icon-error-circle {
+    @include n-icon(error-circle);
+  }
+  .n-icon-error-o {
+    @include n-icon(error-o);
+  }
+  .n-icon-error-t {
+    @include n-icon(error-t);
+  }
+  .n-icon-eur {
+    @include n-icon(eur);
+  }
+  .n-icon-exclamation-triangle {
+    @include n-icon(exclamation-triangle);
+  }
+  .n-icon-exit {
+    @include n-icon(exit);
+  }
+  .n-icon-eye {
+    @include n-icon(eye);
+  }
+  .n-icon-facebook {
+    @include n-icon(facebook);
+  }
+  .n-icon-female {
+    @include n-icon(female);
+  }
+  .n-icon-flag {
+    @include n-icon(flag);
+  }
+  .n-icon-gift {
+    @include n-icon(gift);
+  }
+  .n-icon-go-down {
+    @include n-icon(go-down);
+  }
+  .n-icon-go-up {
+    @include n-icon(go-up);
+  }
+  .n-icon-gp {
+    @include n-icon(gp);
+  }
+  .n-icon-hit-the-target {
+    @include n-icon(hit-the-target);
+  }
+  .n-icon-ig {
+    @include n-icon(ig);
+  }
+  .n-icon-info-circle {
+    @include n-icon(info-circle);
+  }
+  .n-icon-instagram {
+    @include n-icon(instagram);
+  }
+  .n-icon-kzt {
+    @include n-icon(kzt);
+  }
+  .n-icon-last-step {
+    @include n-icon(last-step);
+  }
+  .n-icon-learn {
+    @include n-icon(learn);
+  }
+  .n-icon-lock {
+    @include n-icon(lock);
+  }
+  .n-icon-long-arrow-right {
+    @include n-icon(long-arrow-right);
+  }
+  .n-icon-mail {
+    @include n-icon(mail);
+  }
+  .n-icon-male {
+    @include n-icon(male);
+  }
+  .n-icon-medal {
+    @include n-icon(medal);
+  }
+  .n-icon-minus {
+    @include n-icon(minus);
+  }
+  .n-icon-more {
+    @include n-icon(more);
+  }
+  .n-icon-mouse {
+    @include n-icon(mouse);
+  }
+  .n-icon-offer20000 {
+    @include n-icon(offer20000);
+  }
+  .n-icon-offer500 {
+    @include n-icon(offer500);
+  }
+  .n-icon-offer5000 {
+    @include n-icon(offer5000);
+  }
+  .n-icon-offer70000 {
+    @include n-icon(offer70000);
+  }
+  .n-icon-ok {
+    @include n-icon(ok);
+  }
+  .n-icon-paperplan {
+    @include n-icon(paperplan);
+  }
+  .n-icon-payment {
+    @include n-icon(payment);
+  }
+  .n-icon-payout {
+    @include n-icon(payout);
+  }
+  .n-icon-phone {
+    @include n-icon(phone);
+  }
+  .n-icon-plus {
+    @include n-icon(plus);
+  }
+  .n-icon-post {
+    @include n-icon(post);
+  }
+  .n-icon-profile {
+    @include n-icon(profile);
+  }
+  .n-icon-question-circle {
+    @include n-icon(question-circle);
+  }
+  .n-icon-question {
+    @include n-icon(question);
+  }
+  .n-icon-refresh {
+    @include n-icon(refresh);
+  }
+  .n-icon-round-arrow {
+    @include n-icon(round-arrow);
+  }
+  .n-icon-round-full {
+    @include n-icon(round-full);
+  }
+  .n-icon-round-o {
+    @include n-icon(round-o);
+  }
+  .n-icon-rounded-rect-hollow {
+    @include n-icon(rounded-rect-hollow);
+  }
+  .n-icon-rounded-rect {
+    @include n-icon(rounded-rect);
+  }
+  .n-icon-ru-for-ua {
+    @include n-icon(ru-for-ua);
+  }
+  .n-icon-rub {
+    @include n-icon(rub);
+  }
+  .n-icon-search {
+    @include n-icon(search);
+  }
+  .n-icon-settings {
+    @include n-icon(settings);
+  }
+  .n-icon-shield {
+    @include n-icon(shield);
+  }
+  .n-icon-simple-check {
+    @include n-icon(simple-check);
+  }
+  .n-icon-skype {
+    @include n-icon(skype);
+  }
+  .n-icon-star {
+    @include n-icon(star);
+  }
+  .n-icon-support {
+    @include n-icon(support);
+  }
+  .n-icon-tg {
+    @include n-icon(tg);
+  }
+  .n-icon-timeframes {
+    @include n-icon(timeframes);
+  }
+  .n-icon-times-circle-o {
+    @include n-icon(times-circle-o);
+  }
+  .n-icon-times {
+    @include n-icon(times);
+  }
+  .n-icon-tool-bold {
+    @include n-icon(tool-bold);
+  }
+  .n-icon-tool-candlestick {
+    @include n-icon(tool-candlestick);
+  }
+  .n-icon-tool-delete {
+    @include n-icon(tool-delete);
+  }
+  .n-icon-tool-drawing {
+    @include n-icon(tool-drawing);
+  }
+  .n-icon-tool-indicator {
+    @include n-icon(tool-indicator);
+  }
+  .n-icon-tool-italics {
+    @include n-icon(tool-italics);
+  }
+  .n-icon-tool-mountain {
+    @include n-icon(tool-mountain);
+  }
+  .n-icon-tool-setting {
+    @include n-icon(tool-setting);
+  }
+  .n-icon-tool-size {
+    @include n-icon(tool-size);
+  }
+  .n-icon-tool-theme {
+    @include n-icon(tool-theme);
+  }
+  .n-icon-tool-thickness {
+    @include n-icon(tool-thickness);
+  }
+  .n-icon-training {
+    @include n-icon(training);
+  }
+  .n-icon-tw {
+    @include n-icon(tw);
+  }
+  .n-icon-usd {
+    @include n-icon(usd);
+  }
+  .n-icon-vk {
+    @include n-icon(vk);
+  }
+  .n-icon-wallet-in {
+    @include n-icon(wallet-in);
+  }
+  .n-icon-wallet-o {
+    @include n-icon(wallet-o);
+  }
+  .n-icon-wallet-out {
+    @include n-icon(wallet-out);
+  }
+  .n-icon-wallet {
+    @include n-icon(wallet);
+  }
+  .n-icon-weibo {
+    @include n-icon(weibo);
+  }
+  .n-icon-winner {
+    @include n-icon(winner);
+  }
+  .n-icon-x {
+    @include n-icon(x);
+  }
+  .n-icon-youtube {
+    @include n-icon(youtube);
+  }
+  .n-icon-zalo {
+    @include n-icon(zalo);
+  }
+  .n-icon-zechat {
+    @include n-icon(zechat);
+  }

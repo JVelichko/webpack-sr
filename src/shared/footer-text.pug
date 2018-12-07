@@ -1,0 +1,22 @@
+span.platform-info
+  span.line(t=("promo_all.footer_home"))
+  span.line
+      a.link(href="https://binomo.com/contacts", target="_blank")
+        | Stagord Resources Ltd
+
+
+//- span.platform-info
+//-   span.line
+//-     = t("footer_home")
+//-     |&nbsp;
+//-   span.line
+//-     - if I18n.locale.equal?(:cn)
+//-       = t('promo.footer_home_owner')
+//-     - else
+//-       = t("footer_home_owner")
+//-       =< link_to "Stagord Resources Ltd", contacts_path, class: "link"
+//-       |&nbsp;
+//-   - if !I18n.locale.equal?(:cn)
+//-     span.line
+//-       = t("footer_home_place")
+//-       |&nbsp;

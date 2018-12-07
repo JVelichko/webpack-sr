@@ -1,0 +1,8 @@
+mixin app-link(choose)
+  if choose == 'ios'
+    a.mobile-app-link.ios(target="_blank", xlocale, class=attributes.class)
+  if choose == 'android'
+    a.mobile-app-link.gplay(target="_blank", xlocale, class=attributes.class)
+  if choose == 'all'
+    a.mobile-app-link.ios(target="_blank", xlocale, class=attributes.class)
+    a.mobile-app-link.gplay(target="_blank", xlocale, class=attributes.class)

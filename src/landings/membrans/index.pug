@@ -1,0 +1,38 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title S&R Systems | Мембраны и модульные системы
+  body
+    include ../../includes/header.pug
+
+    section.sub-section.series-card
+      .container
+        h5.text-center.title.mb-4 каталог
+
+        .card-deck.justify-content-center
+          .row.series-card.justify-content-center
+
+            .card.col-10.col-md-4.mb-4.box-shadow.series
+              img.img-fluid-90(src='~images/romakon.png')
+              .card-body
+                h6.title Мембранные материалы
+                p.card-text.
+                  Первапорационные мембраны на основе полигетероариленов для разделения различных жидких смесей органических веществ, в том числе для обезвоживания органических растворителей.
+                a(class='d-flex align-items-center' href='/ru/membrans/material')
+                  span.mr-1 Посмотреть продукцию
+                  i.icon-scroll-arrow-to-right-1
+
+            .card.col-10.col-md-4.mb-4.box-shadow.series
+              img.img-fluid-90(src='~images/trident.png')
+              .card-body
+                h6.title Мембранные модульные системы
+                p.card-text.
+                  Реакционные сосуды из нержавеющей стали и других сплавов.
+                  Снабжаются датчиками и постами управления по требованию заказчика
+                  Возможно изготовление во взрывозащищенном исполнении
+                a(class='d-flex align-items-center' href='/ru/membrans/modules')
+                  span.mr-1 Посмотреть продукцию
+                  i.icon-scroll-arrow-to-right-1

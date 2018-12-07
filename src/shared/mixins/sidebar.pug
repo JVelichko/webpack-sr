@@ -1,0 +1,9 @@
+mixin sidebar
+  .sidebar(class=attributes.class, id=attributes.id)
+    .sidebar-content
+      .sidebar-body
+        if block
+          block
+        else
+          .sidebar-title Регистрация
+          include ../sign-up-form.pug

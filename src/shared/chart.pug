@@ -1,0 +1,32 @@
+.ct-canvas_wrap
+  #canvas
+  .ct-wrap_info
+    .ct-wrap_info_in
+      #question.ct-question
+        h3(t="promo_all.demo_chart.title")
+        button#btn_up.ct-btn_up(type="button", t=("promo_all.demo_chart.call"))
+        button#btn_down.ct-btn_down(type="button", t=("promo_all.demo_chart.put"))
+
+      #good_choice.ct-good_choice
+        h3(t="promo_all.demo_chart.good_choice")
+        span(t="promo_all.demo_chart.now_wait")
+
+      #bad_choice.ct-bad_choice
+        h3(t="promo_all.demo_chart.wait_result")
+
+      #good_result.ct-good_result
+        span.result
+          | $182
+        small(t="promo_all.demo_chart.earnings")
+        h3
+          span(t="promo_all.demo_chart.congratulations")
+          span(t="promo_all.demo_chart.correct")
+        button.ct-btn_gold(type="button", t=("promo_all.demo_chart.start"), scroll-to=".form-to-scroll")
+      #bad_result.ct-bad_result
+        span.result 
+          | $0
+        small(t="promo_all.demo_chart.earnings")
+        h3
+          span(t="promo_all.demo_chart.unfortunately")
+          span(t="promo_all.demo_chart.incorrect")
+        button#btn_again.ct-btn_gold(type="button", t=("promo_all.demo_chart.try"))

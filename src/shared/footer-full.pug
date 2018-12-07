@@ -1,0 +1,55 @@
+//- simplify. w8 #{locale} for pug
+
+footer.page-footer
+  nav.offset-row-lg-s.tab-row(role="navigation")
+    a.btn-link.btn-link-secondary(target="_blank", t=('promo_all.menu.education') , href="https://binomo.com/help")
+    a.btn-link.btn-link-secondary(target="_blank", t=('promo_all.menu.faq') , href="https://binomo.com/faq")
+    a.btn-link.btn-link-secondary(target="_blank", t=('promo_all.menu.offers') , href="https://binomo.com/offers")
+    a.btn-link.btn-link-secondary(target="_blank", t=('promo_all.menu.about') , href="https://binomo.com/about")
+    a.btn-link.btn-link-secondary(target="_blank", t=('promo_all.menu.contacts') , href="https://binomo.com/contacts")
+    a.btn-link.btn-link-secondary(target="_blank", t=('promo_all.menu.regulation') , href="https://binomo.com/regulation")
+    a.btn-link.btn-link-secondary(target="_blank", t=('promo_all.menu.agreement') , href="https://binomo.com/agreement")
+    a.btn-link.btn-link-secondary(target="_blank", t=('promo_all.menu.binpartner') , href="https://binpartner.com/")
+
+  section.copy.social-row(role="contentinfo")(xlocale)
+    include ./footer-soc-links
+
+    p.text-caption1.text-primary-low
+      include ./footer-text
+
+//-     p.text-caption1.text-primary-low
+//-       = link_to t("menu.privacy"), :privacy, class: "link-underline"
+//-       br
+
+//-       - if I18n.locale.equal?(:th)
+//-         |&copy; 2557-
+//-         => Time.zone.today.year + 543
+//-         = t"copy_second_address"
+
+//-       - else
+//-         |&copy; 2014-
+//-         => Time.zone.today.year
+//-         = t"copy_second_address"
+
+//-       - if I18n.locale.equal?(:cn)
+//-         br
+//-         = link_to "粤ICP备17065741号-2", "http://www.miitbeian.gov.cn/", class: "link-underline"
+
+
+//-     | <!--noindex-->
+//-     .footer-text
+//-       p.offset-row-sm-l t="footer_comission"
+//-       p t="footer_home"
+//-         - if !I18n.locale.equal?(:ru)
+//-           = t"footer_home_owner"
+//-           - if I18n.locale.equal?(:cn)
+//-             = t"copy_second_address"
+//-           - else
+//-             =< link_to "Tiburon Corporation Limited", contacts_path, class: "link-underline"
+//-           |.
+//-           =< t"footer_home_operated"
+//-           =< link_to "Stagord Resources LTD", contacts_path, class: "link-underline"
+//-           '.
+//-           = t"footer_home_place"
+
+//-     | <!--/noindex-->

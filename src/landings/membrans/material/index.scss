@@ -1,0 +1,19 @@
+.docs-sheets:after {
+  content: "";
+  display:inline-block;
+  height:25px;
+  width:25px;
+  background-size: 25px 25px;
+  background-image: url('~images/sheets.svg');
+  background-repeat: no-repeat;
+}
+table {
+  overflow-x: auto;
+  display: block;
+  width: fit-content;
+  font-size: 12px;
+
+  @media only screen and (min-width:576px) {
+    font-size: 14px;
+  }
+}

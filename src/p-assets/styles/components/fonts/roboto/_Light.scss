@@ -1,0 +1,17 @@
+/* BEGIN Light */
+@font-face {
+	font-family: 'roboto-light';
+	@include fontdef-woff($FontPathroboto, $FontNameroboto,  "light");
+	font-weight: 300;
+	font-style: normal;
+}
+/* END Light */
+
+/* BEGIN Light Italic */
+@font-face {
+  font-family: 'roboto-light-italic';
+  @include fontdef-woff($FontPathroboto, $FontNameroboto,  "lightitalic");
+  font-weight: 300;
+  font-style: italic;
+}
+/* END Light Italic */

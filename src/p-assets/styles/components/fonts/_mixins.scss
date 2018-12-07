@@ -1,0 +1,7 @@
+// unstable
+
+@mixin fontdef-woff($FontPath, $FontName, $FontType:"Regular") {
+  src:  font-url('#{$FontPath}/#{$FontType}/#{$FontName}-#{$FontType}.woff2') format('woff2'),
+      font-url('#{$FontPath}/#{$FontType}/#{$FontName}-#{$FontType}.woff') format('woff'),
+      font-url('#{$FontPath}/#{$FontType}/#{$FontName}-#{$FontType}.ttf') format('truetype');
+}

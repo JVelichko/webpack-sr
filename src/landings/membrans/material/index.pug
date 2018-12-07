@@ -1,0 +1,203 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title S&R Systems | Мембранные материалы
+  body
+    include ../../../includes/header.pug
+    section
+      .container
+        .row.justify-content-around.align-items-center
+          .col-12.col-md-5
+            #carousel_material.carousel.slide(data-ride='carousel')
+              .carousel-inner
+                .carousel-item.active
+                  img.img-fluid(src='~images/romakon.png', alt='romakon')
+                  .carousel-caption.d-none.d-md-block.text-center
+                    span ROMAKON
+                .carousel-item
+                  img.img-fluid(src='~images/romakon-al2.png', alt='romakon-al2')
+                  .carousel-caption.d-none.d-md-block.text-center
+                    span ROMAKON-Al2
+              a.carousel-control-prev(href='#carousel_material', role='button', data-slide='prev')
+                i.icon-scroll-arrow-to-left-1
+                span.sr-only Previous
+              a.carousel-control-next(href='#carousel_material', role='button', data-slide='next')
+                i.icon-scroll-arrow-to-right-1
+                span.sr-only Next
+          .col-12.col-md-6.text-justify
+            h5.mb-5 Мембранные материалы
+            p.
+              Первапорационные мембраны на основе полигетероариленов для разделения различных жидких смесей органических веществ, в том числе для обезвоживания органических растворителей.
+        .row.justify-content-around
+          .col-10.col-md-5.box-shadow.bg-grey.mb-4
+            .row.align-items-center.h-100
+              .col-4.p-0#material_romakon
+                img.img-fluid(src="~images/romakon.png", alt="romakon")
+              .col.card-inner
+                h6.title Ассиметричные мембранные материалы ROMAKON
+                p.card-text.
+                  Гидрофильные фильтрующие материалы ROMAKON для первапорационного разделения реакционных смесей оксигенатов и водно-спиртовых смесей с низким массовым содержанием спирта.
+                .d-flex.justify-content-between.align-items-center
+                  button.btn.btn-sm.btn-light(type='button' data-toggle="modal" data-target="#romakon") Подробнее
+          .col-10.col-md-5.box-shadow.bg-grey.mb-4
+            .row.align-items-center.h-100
+              .col-4.p-0#material_romakon-al2
+                img.img-fluid(src="~images/romakon-al2.png", alt="romakon-al2")
+              .col.card-inner
+                h6.title Ассиметричные мембранные материалы ROMAKON Al2
+                p.card-text.
+                  Асимметричные гидрофильные материалы для первапорационного обезвоживания высших спиртов и органических растворителей.
+                d-flex.justify-content-between.align-items-center
+                  button.btn.btn-sm.btn-light(type='button' data-toggle="modal" data-target="#romakon_al2") Подробнее
+
+
+
+#romakon.modal.fade(tabindex='-1', role='dialog', aria-labelledby='romakon', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered.modal-lg(role='document')
+    .modal-content
+      .modal-header
+        h5#romakon-label.modal-title Ассиметричные мембранные материалы ROMAKON
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        .row.align-items-center
+          .col-5.p-0
+            img.img-fluid(src='~images/romakon.png', alt='romakon')
+          .col-12.col-md-7
+            p Ключевые преимущества:
+            ul
+              li Исключительная термостабильность. устойчивы до 300 °C, пригодны для сухожаровой стерилизации.
+              li Исключительная механическая прочность. Выдерживают избыточное давление в 10 бар при фильтрации, без возникновения остаточных деформаций
+              li Устойчивы в интервале pH 0-9 и к большинству органических растворителей
+              li Отсутсвие выделений в сферу продукта
+        .row.justify-content-center.align-items-center.mb-4
+          .col-12
+            table.table.table-striped
+              thead
+                tr
+                  th Cостав питающей смеси (EtOH масс%)
+                  th Удельная производительность кг/м2ч
+                  th Фактор разделения
+              tbody
+                tr
+                  td 0,0
+                  td 0,22
+                  td -
+                tr
+                  td 5,8
+                  td 0,14
+                  td 17
+                tr
+                  td 11,6
+                  td 0,15
+                  td 37
+                tr
+                  td 13,2
+                  td 0,16
+                  td 41
+                tr
+                  td 17,7
+                  td 0,16
+                  td 24
+                tr
+                  td 24,5
+                  td 0,15
+                  td 43
+                tr
+                  td 26,5
+                  td 0,10
+                  td 25
+                tr
+                  td 30,3
+                  td 0,18
+                  td 24
+                tr
+                  td 51,5
+                  td 0,26
+                  td 14
+                tr
+                  td 54,2
+                  td 0,28
+                  td 10
+                tr
+                  td 63,6
+                  td 0,40
+                  td 13
+                tr
+                  td 84,2
+                  td 0,40
+                  td 12
+                tr
+                  td 95,7
+                  td 0,65
+                  td 6
+        .row
+          .col-12
+            div.text-center
+              span Диффузионная кривая материала ROMAKON при первапорации смеси H2O/EtOH при 40 °C
+              img(src="~images/PAI_DC2.png")
+      .modal-footer.text-center.mb-4
+        a(class='d-flex align-items-center' href='/ru/contacts')
+          span.mr-1 Получить больше информации о селективно-транспортных свойствах
+          i.icon-scroll-arrow-to-right-1
+
+#romakon_al2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='romakon_al2', aria-hidden='true')
+  .modal-dialog.modal-dialog-centered.modal-lg(role='document')
+    .modal-content
+      .modal-header
+        h5#romakon_al2-label.modal-title Ассиметричные мембранные материалы ROMAKON
+        button.close(type='button', data-dismiss='modal', aria-label='Close')
+          span(aria-hidden='true') ×
+      .modal-body
+        .row.align-items-center
+          .col-5.p-0
+            img.img-fluid(src='~images/romakon-al2.png', alt='romakon')
+          .col-12.col-md-7
+            p Ключевые преимущества:
+            ul
+              li Длительный срок эксплуатации
+              li Биосовместимость
+              li Высокая удельная производительность
+              li Отсутствие выделений в сферу продукта, химическая устойчивость к большинству органических растворителей
+        .row.justify-content-center.align-items-center.mb-4
+          .col-12
+            table.table.table-striped
+              thead
+                tr
+                  th Состав питающей смеси ( Изопропанол масс% )
+                  th Удельная производительность кг/м2ч
+                  th Фактор разделения
+              tbody
+                tr
+                  td 90,78%
+                  td 0,58
+                  td Более 1000
+                tr
+                  td 92,55%
+                  td 0,289
+                  td Более 1000
+                tr
+                  td 96,93%
+                  td 0,21606
+                  td Более 1000
+                tr
+                  td 99,00%
+                  td 0,104
+                  td Более 1000
+                tr
+                  td 99,60%
+                  td 0,033
+                  td Более 1000
+
+        .row
+          .col-12
+            div.text-center
+              span Диффузионная кривая материала ROMAKON Al2 при первапорации смеси H2O/IPA при 40 °C
+              img(src="~images/al2-graph.png")
+      .modal-footer.text-center.mb-4
+        a(class='d-flex align-items-center' href='/ru/contacts')
+          span.mr-1 Получить больше информации о селективно-транспортных свойствах
+          i.icon-scroll-arrow-to-right-1

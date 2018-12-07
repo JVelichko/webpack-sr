@@ -1,0 +1,48 @@
+form.form.form-registration(name="signUp")
+  fieldset
+    .form-group
+      label.focus-helper.email
+        .tooltip.top.tooltip-error.tooltip-offset-md.fade.in(style='top: -32px; left: 81px;')
+          .tooltip-arrow
+          .tooltip-inner.ng-binding
+        span.form-title(t="promo_all.registration.label.email")
+        input.form-control.input-md(type="text", name="email")
+    .form-group
+      span.input-password.helper.fa
+      label.focus-helper.password
+        .tooltip.ng-scope.ng-isolate-scope.top.tooltip-error.tooltip-offset-md.fade.in(style='top: -32px; left: 81px;')
+          .tooltip-arrow
+          .tooltip-inner.ng-binding
+        span.form-title(t="promo_all.registration.label.password")
+        input.form-control.input-md(name="password", type="password")
+    .form-group.currency-cont
+      span.form-title.currency-title(t="promo_all.registration.label.currency")
+      .form-currency
+        .currency-block.currency-inner
+          label.custom-radio-currency(ng-repeat="currency in vm.currencies")
+            input.radio(name="currency" ng-model="vm.authForm.currency" ng-value="currency.iso" type="radio")
+            span.decorator
+              span.n-icon.size-16(ng-bind="currency.unit")
+    .form-group.i_agree-cont
+      label.focus-helper.label-agree.i_agree
+        .tooltip.ng-scope.ng-isolate-scope.top.tooltip-error.tooltip-offset-md.fade.in(style='top: -32px; left: 81px;')
+          .tooltip-arrow
+          .tooltip-inner.ng-binding
+        input.form-control(binomo-model-error="serverMessage" error-placement="top" hidden="" name="i_agree" ng-model="vm.authForm.i_agree" type="checkbox")
+        span.check
+      span.check-text
+        span(t="promo_all.registration.label.i_agree")
+        | 
+        a.link(href="/agreement" t="promo_all.registration.label.agreement" target="_blank")
+        | 
+        span(t="promo_all.and")
+        | 
+        a.link(href="/privacy" t="promo_all.registration.label.privacy" target="_blank")
+    .form-group
+      span.form-info.hidden.fa
+      button.btn.submit.sign-up-btn.stretch(t="promo_all.registration.start_trading" type="button")
+    .form-group
+      label.focus-helper.g-recaptcha-response
+        .tooltip.ng-scope.ng-isolate-scope.top.tooltip-error.tooltip-offset-md.fade.in(style='top: -32px; left: 81px;')
+          .tooltip-arrow
+          .tooltip-inner.ng-binding
